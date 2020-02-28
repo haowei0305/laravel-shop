@@ -23,9 +23,9 @@ class MemberServiceProvider extends ServiceProvider{
      * 注册中间件
      * */
     protected function registerMiddleware(){
-        dd($this->app);
+
         foreach ($this->routeMiddleware as $key => $middleware) {
-           // $this->router->aliasMiddleware($key, $middleware);
+            $this->app['router']->aliasMiddleware($key, $middleware);
         }
     }
 
