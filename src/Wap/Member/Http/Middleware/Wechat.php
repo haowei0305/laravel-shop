@@ -10,7 +10,7 @@ use Closure;
 class Wechat{
     public function handle($request, Closure $next){
         if ($request->age <= 200) {
-            return 'yyy';
+            return response('测试数据');
         }
 
         return $next($request);
