@@ -8,5 +8,11 @@
             "email": "917361785@qq.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Linhaowei\\LaravelShop\\": "src"
+        }
+    }
+
 }
