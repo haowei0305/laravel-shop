@@ -9,5 +9,7 @@ namespace Linhaowei\LaravelShop\Wap\Member\Http\Controllers;
 use Illuminate\Routing\Controller;
 
 class MemberController extends  Controller{
+        public function wap(){
 
+        }
 }
