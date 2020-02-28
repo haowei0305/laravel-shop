@@ -1,0 +1,12 @@
+{
+    "name": "linhaowei/laravel-shop",
+    "description": "一测试组件开发",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "linhaowei",
+            "email": "917361785@qq.com"
+        }
+    ],
+    "require": {}
+}
