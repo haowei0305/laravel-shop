@@ -10,6 +10,6 @@ use Illuminate\Routing\Controller;
 
 class MemberController extends  Controller{
         public function wap(){
-echo 4;
+              echo 4;
         }
 }
