@@ -23,7 +23,6 @@ class MemberServiceProvider extends ServiceProvider{
 
     public function boot(){
         $this->memberAuthConfig();
-        dd(config());
     }
 
     public function memberAuthConfig()
