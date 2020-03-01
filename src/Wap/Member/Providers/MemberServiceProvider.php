@@ -22,7 +22,7 @@ class MemberServiceProvider extends ServiceProvider{
 
     private function mergeConfig()
     {
-        $this->mergeConfigFrom(__DIR__.'../Config/member.php','wap.member');
+        $this->mergeConfigFrom(__DIR__.'/../Config/member.php','wap.member');
         dd(config());
     }
 
