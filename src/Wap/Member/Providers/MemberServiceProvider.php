@@ -6,6 +6,7 @@
  * Time: 15:47
  */
 namespace Linhaowei\LaravelShop\Wap\Member\Providers;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -13,17 +14,26 @@ class MemberServiceProvider extends ServiceProvider{
     protected $routeMiddleware = [
         'wechat' =>\Linhaowei\LaravelShop\Wap\Member\Http\Middleware\Wechat::class
     ];
+
     public function register(){
         $this->registerRoutes();
         $this->registerMiddleware();
-
         $this->mergeConfig();
+    }
+
+    public function boot(){
+        $this->memberAuthConfig();
+        dd(config());
+    }
+
+    public function memberAuthConfig()
+    {
+        config(Arr::dot(config('wap.member.auth',[]),'auth.'));
     }
 
     private function mergeConfig()
     {
         $this->mergeConfigFrom(__DIR__.'/../Config/member.php','wap.member');
-        dd(config());
     }
 
 
