@@ -16,6 +16,14 @@ class MemberServiceProvider extends ServiceProvider{
     public function register(){
         $this->registerRoutes();
         $this->registerMiddleware();
+
+        $this->mergeConfig();
+    }
+
+    private function mergeConfig()
+    {
+        $this->mergeConfigFrom(__DIR__.'../Config/member.php','wap.member');
+        dd(config());
     }
 
 
